@@ -1,0 +1,181 @@
+Coffee Time – Landing Page de Cafés
+
+Hero em vídeo com overlay, CTAs, e seção Best Sellers com cards de produto, avaliação por estrelas e layout 100% responsivo. Construído com React + TypeScript + Vite e Tailwind CSS v4.
+
+✨ Features
+
+Hero com vídeo em background, overlay escuro, título/subtítulo e 2 CTAs
+
+Best Sellers: grid de produtos com imagem, descrição, preço e rating (Lucide)
+
+Header fixo e navegação por âncoras (scroll suave)
+
+Design responsivo (mobile → desktop)
+
+Código tipado (TS) e componentes reaproveitáveis
+
+🧱 Stack
+
+React + Vite + TypeScript
+
+Tailwind CSS v4
+
+Lucide React (ícones de estrela)
+
+Opcional: Radix Slot / shadcn, caso você adicione botões/inputs no futuro.
+
+🚀 Como rodar
+# 1) Clonar
+git clone <seu-repo.git>
+cd coffee-time
+
+# 2) Instalar dependências
+npm install
+
+# 3) Rodar dev
+npm run dev
+
+Importante (Tailwind v4)
+
+O plugin do PostCSS mudou no Tailwind v4. Certifique-se de ter:
+
+npm i -D @tailwindcss/postcss autoprefixer
+
+
+postcss.config.js
+
+export default {
+  plugins: {
+    "@tailwindcss/postcss": {},
+    autoprefixer: {},
+  },
+};
+
+
+src/index.css
+
+@import "tailwindcss";
+
+
+tailwind.config.ts (mínimo)
+
+import type { Config } from "tailwindcss";
+
+export default {
+  content: ["./index.html", "./src/**/*.{ts,tsx}"],
+  theme: { extend: {} },
+  plugins: [],
+} satisfies Config;
+
+
+Após alterar configs, reinicie o npm run dev.
+
+📁 Estrutura
+public/
+  CoffeeHero.mp4           # vídeo do hero
+src/
+  assets/
+    coffee-1.jpg
+    coffee-2.jpg
+    coffee-3.jpg
+  components/
+    Header.tsx
+    Hero.tsx
+    ProductCard.tsx
+  App.tsx
+  main.tsx
+  index.css
+tailwind.config.ts
+postcss.config.js
+
+🔧 Componentes principais
+<Hero />
+
+Props:
+
+{
+  videoSrc?: string;               // "/CoffeeHero.mp4"
+  title: string;                   // "Experimente a arte do café."
+  subtitle: string;                // descrição curta
+  primaryCta: { text: string; href: string };   // { text: "Ver Best Sellers", href: "#best-sellers" }
+  secondaryCta: { text: string; href: string }; // { text: "Acessar a Loja", href: "#shop" }
+}
+
+
+Dicas:
+
+Troque a opacidade do overlay para ajustar o contraste (bg-black/60 → /70).
+
+Use vídeos curtos (6–8s, 1080p, ~4–6 Mbps).
+
+<ProductCard />
+
+Props:
+
+{
+  image: string;     // import de src/assets ou /images/... se estiver em public
+  title: string;
+  subtitle: string;
+  price: string;     // "R$ 12,90"
+  rating: number;    // 0–5 (renderiza 5 estrelas)
+}
+
+
+No App.tsx, um array tipado mapeia os cards para a seção Best Sellers.
+
+🎨 Customização
+
+Cor da marca (caramelo do botão): troque #C67C4E nos componentes por sua paleta.
+
+Fonts: adicione no index.html (ex.: Inter/Playfair) e use em classes Tailwind.
+
+Se preferir tokens de cor (ex.: brand.caramel), estenda em tailwind.config.ts.
+
+Exemplo:
+
+extend: {
+  colors: { brand: { caramel: "#C67C4E" } }
+}
+
+
+Uso: bg-brand-caramel hover:bg-brand-caramel/90.
+
+♿ Acessibilidade
+
+Texto com alto contraste (overlay no hero + drop-shadow no título)
+
+Ícones com aria-hidden por padrão; mantenha textos descritivos próximos
+
+Scroll suave por âncoras acionado nos links das CTAs
+
+⚡ Performance
+
+Comprima imagens (≤ 1600px) e use formatos modernos (WEBP) quando puder
+
+Vídeo curto e otimizado; preload="metadata" se necessário
+
+Evite classes custom inexistentes (use Tailwind puro ou configure no config)
+
+🧪 Scripts
+{
+  "dev": "vite",
+  "build": "tsc -b && vite build",
+  "preview": "vite preview"
+}
+
+☁️ Deploy
+
+Vercel / Netlify
+Build: npm run build → Output: dist/
+
+📌 Roadmap (idéias)
+
+Seção About / Delivery / Testimonial
+
+Carrinho e persistência local
+
+Filtros por torra / origem / moagem
+
+Animações sutis (Framer Motion)
+
+Internacionalização (pt-BR / en)
