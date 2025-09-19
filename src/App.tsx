@@ -6,6 +6,7 @@ import type { ProductCardProps } from "./components/ProductCard";
 import Coffee1 from "./assets/coffee-1.jpg";
 import Coffee2 from "./assets/coffee-2.jpg";
 import Coffee3 from "./assets/coffee-3.jpg";
+import About from "./components/About";
 
 const products: ProductCardProps[] = [
   {
@@ -64,6 +65,8 @@ function App() {
           </div>
         </div>
       </section>
+
+      <About/>
     </>
   );
 }
