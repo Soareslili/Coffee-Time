@@ -3,9 +3,9 @@ import CoffeeAboutVideo from "../../public/CoffeeAbout.mp4";
 
 const About = () => {
   return (
-    <section className="bg-[#2b1d16]">
+    <section id="about" className="bg-[#2b1d16]">
       <div className="container mx-auto px-4 py-16">
-      
+
         <div className="mb-10 text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3">
             About Us
@@ -15,13 +15,13 @@ const About = () => {
           </p>
         </div>
 
-      
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-      
+
           <div className="w-full]">
             <div className="relative overflow-hidden rounded-xl shadow-xl ring-1 ring-black/10">
               <video
-                src={CoffeeAboutVideo}
+                src="/CoffeeAbout.mp4"
                 autoPlay
                 muted
                 loop
@@ -35,7 +35,7 @@ const About = () => {
             </div>
           </div>
 
-      
+
           <div className="space-y-6 text-left">
             <p className="text-lg text-gray-300 leading-relaxed">
               Há mais de 10 anos, dedicamos nossa vida ao café. Começamos como
@@ -55,6 +55,8 @@ const About = () => {
         </div>
       </div>
     </section>
+
+
   );
 };
 

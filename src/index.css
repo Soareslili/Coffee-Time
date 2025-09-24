@@ -1,4 +1,8 @@
 @import "tailwindcss";
+@plugin "tailwindcss-animate";
 
 
+.dark {
+  --muted-foreground: var(--light-100);
+}
 
