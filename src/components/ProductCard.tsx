@@ -55,10 +55,10 @@ const ProductCard: React.FC<ProductCardProps> = ({
 
      
         <div className="flex gap-3 pt-4">
-          <button className="flex-1 rounded-lg bg-amber-600 hover:bg-amber-700 text-white font-semibold py-2 transition">
+          <button className="flex-1 rounded-lg bg-amber-600 hover:bg-amber-700 cursor-pointer text-white font-semibold py-2 transition">
             Adicionar
           </button>
-          <button className="flex-1 rounded-lg border border-amber-500 text-amber-400 hover:bg-amber-500 hover:text-white font-semibold py-2 transition">
+          <button className="flex-1 rounded-lg border border-amber-500 text-amber-400 cursor-pointer hover:bg-amber-500 hover:text-white font-semibold py-2 transition">
             Detalhes
           </button>
         </div>

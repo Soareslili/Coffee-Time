@@ -14,6 +14,8 @@ import { useEffect } from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Testimonial from "./components/Testimonial";
+import Newsletter from "./components/Newsletter";
+import Footer from "./components/Footer";
 
 const products: ProductCardProps[] = [
   {
@@ -78,6 +80,8 @@ function App() {
       <WhyChoose />
      <Testimonial />
       <DeliveryBlock />
+      <Newsletter/>
+      <Footer/>
     </>
   );
 }

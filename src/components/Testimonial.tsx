@@ -3,8 +3,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 import { Star } from "lucide-react";
-// Se este arquivo está em src/components/TestimonialsSection.tsx:
-import { Card, CardContent } from "./ui/card"; // <- ajuste o path se necessário
+
+import { Card, CardContent } from "./ui/card"; 
 
 const testimonials = [
   {
@@ -96,7 +96,7 @@ const TestimonialsSection = () => {
             <Card
               key={t.id}
               data-aos="fade-up"
-              data-aos-delay={index * 150} // delay progressivo por card
+              data-aos-delay={index * 150}
               data-aos-anchor-placement="top-bottom"
               className="bg-[#4b3621] border border-transparent rounded-lg hover:scale-105 transition-transform duration-300"
             >

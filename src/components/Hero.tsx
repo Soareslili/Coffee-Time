@@ -11,7 +11,7 @@ interface HeroProps {
 const Hero = ({ videoSrc, title, subtitle, primaryCta, secondaryCta }: HeroProps) => {
   return (
     <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
- 
+
       {videoSrc ? (
         <video
           autoPlay
@@ -30,7 +30,7 @@ const Hero = ({ videoSrc, title, subtitle, primaryCta, secondaryCta }: HeroProps
         />
       )}
 
-      
+
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute inset-0 bg-black/60 md:bg-black/55" />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/30 to-black/70" />
@@ -46,7 +46,7 @@ const Hero = ({ videoSrc, title, subtitle, primaryCta, secondaryCta }: HeroProps
           {subtitle}
         </p>
 
-    
+
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <a
             href={primaryCta.href}
@@ -60,24 +60,20 @@ const Hero = ({ videoSrc, title, subtitle, primaryCta, secondaryCta }: HeroProps
           </a>
 
           <a
-            href={secondaryCta.href}
+            href="#sobre" 
             onClick={(e) => {
               e.preventDefault();
-              document.querySelector(secondaryCta.href)?.scrollIntoView({ behavior: "smooth" });
+              document.querySelector("#sobre")?.scrollIntoView({ behavior: "smooth" });
             }}
             className="rounded-xl border border-white/70 text-white/95 hover:bg-white/10 px-8 py-3 text-lg font-semibold backdrop-blur-sm transition"
           >
-            {secondaryCta.text}
+            Sobre a Loja
           </a>
         </div>
       </div>
 
- 
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-white/70 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-white/80 rounded-full mt-2 animate-pulse" />
-        </div>
-      </div>
+
+
     </section>
   );
 };

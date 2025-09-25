@@ -49,6 +49,9 @@ const DeliveryBlock = () => {
 
         
             <a 
+             href="https://wa.me/5599999999999" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-[#C67C4E] hover:bg-[#c67c4e]/80 rounded-3xl cursor-pointer text-white font-inter font-medium px-8 py-3 text-lg shadow-lg hover:shadow-xl transition-all duration-300"
             >
               Assinar plano
